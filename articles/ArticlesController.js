@@ -1,14 +1,15 @@
-const express = require('express');
+const express = require('express')
 const router = express.Router();
 
-// → Main route to articles
+// → Main route to articles page
 router.get('/articles', (req, res) => {
     res.render('articles')
 });
 
-// → Route to create an article
-router.get('/admin/articles/new', (req, res) => {
+// → Route to create a new article
+router.get('/articles/admin/new', (req, res) => {
     res.render('newArticle')
 });
 
-module.exports = router;
+// → Exports the articles router
+module.exports = router; 

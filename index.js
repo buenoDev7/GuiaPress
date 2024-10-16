@@ -13,11 +13,14 @@ connection.authenticate()
     });
 
 // → Routers
-const CategoriesController = require('./categories/CategoriesController');
-const ArticlesController = require('./articles/ArticlesController');
+const ArticlesController = require('./articles/ArticlesController')
+const CategoriesController = require('./categories/CategoriesController')
 
-app.use('/', CategoriesController);
-app.use('/', ArticlesController);
+// → Route to articles page
+app.use('/', ArticlesController)
+
+// → Route to Categories page
+app.use('/', CategoriesController)
 
 // bodyParser
 const bodyParser = require('body-parser');
