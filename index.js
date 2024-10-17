@@ -13,8 +13,8 @@ connection.authenticate()
     });
 
 // → Routers
-const ArticlesController = require('./articles/ArticlesController')
-const CategoriesController = require('./categories/CategoriesController')
+const ArticlesController = require('./controllers/articles/ArticlesController')
+const CategoriesController = require('./controllers/categories/CategoriesController')
 
 // → Route to articles page
 app.use('/', ArticlesController)
