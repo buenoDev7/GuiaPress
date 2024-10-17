@@ -21,4 +21,5 @@ const Category = connection.define('categories', {
     }
 );
 
+// → Exports this Model
 module.exports = Category;
