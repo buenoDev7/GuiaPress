@@ -1,14 +1,9 @@
 const express = require('express')
 const router = express.Router();
 
-// → Main route to Categories page
-router.get('/categories', (req, res) => {
-    res.render('categories')
-});
-
 // → Route to create a new Category
-router.get('/categories/admin/new', (req, res) => {
-    res.render('newCategory')
+router.get('/admin/categories/new', (req, res) => {
+    res.render('../views/admin/categories/newCategory')
 });
 
 // → Exports the router
