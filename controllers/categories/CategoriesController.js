@@ -16,7 +16,7 @@ router.post('/sendNewCategory', (req, res) => {
             slug: slugify(categoryName).toLowerCase()
         }).then(() => {
             console.log(`\n✅ Category '${categoryName}' registered sucessfully!`)
-            res.redirect('/admin/categories/new')
+            res.redirect('/admin/categories')
         }).catch((error) => {
             console.log(`\n❌ Failed to register new Category: ${error}`)
         })
