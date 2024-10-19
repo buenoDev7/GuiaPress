@@ -12,6 +12,10 @@ connection.authenticate()
         console.log(`\n❌ The database connection failed: ${error}`)
     });
 
+// bodyParser
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+
 // → Routers
 const ArticlesController = require('./controllers/articles/ArticlesController');
 const CategoriesController = require('./controllers/categories/CategoriesController');
@@ -24,10 +28,6 @@ app.use('/', ArticlesController);
 // → Route to Categories page
 app.use('/', CategoriesController);
 
-// bodyParser
-const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({extended: false}));
-
 // View Engine
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -38,6 +38,6 @@ app.get('/', (req, res) => {
     res.render('homepage');
 })
 
-app.listen(PORT, ()=> {
+app.listen(PORT, () => {
     console.log(`\n🚀 Server running on port ${PORT}`)
 });

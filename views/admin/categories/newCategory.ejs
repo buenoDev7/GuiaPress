@@ -16,6 +16,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/newCategory.css">
+    <!-- JS -->
+    <script src="/js/newCategory.js" defer></script>
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -37,9 +39,27 @@
         <div class="col-10 col-lg-6 mx-auto mt-5">
             <div class="card bg-dark border-0">
                 <div class="card-body">
+
                     <form action="/sendNewCategory" method="POST" class="form-control bg-dark text-white" id="formNewCategory">
                         <label for="categoryName" class="form-label fw-semibold">Category name:</label>
-                        <input type="text" class="form-control bg-dark text-white fw-semibold" id="categoryName" name="categoryName" placeholder="Ex.: JavaScript" required autocomplete="off">
-                        <button type="submit" action="button" class="btn btn-outline-success mt-3 fw-semibold">Register new Category</button>
+                        <input type="text" 
+                        class="form-control bg-dark text-white fw-semibold" 
+                        id="categoryName"
+                        name="categoryName" 
+                        placeholder="Ex.: JavaScript" 
+                        required 
+                        autocomplete="off"
+                        >
+                        <button type="submit" action="button" class="btn btn-outline-success mt-3 fw-semibold" id="liveToastBtn">
+                            Register new Category
+                        </button>
                     </form>
-    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
