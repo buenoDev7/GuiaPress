@@ -42,13 +42,14 @@
                     <th class="text-success">Actions</th>
                 </tr>
             </div>
-            <div class="tbody w-100">
-                <tr>
-                    <th>1</th>
-                    <th>JavaScript</th>
-                    <th>Send, post</th>
-                    <th>Send, post</th>
-                </tr>
+            <div class="tbody">
+                <% categories.forEach(category => { %>
+                    <tr>
+                        <th><%= category.id %></th>
+                        <th><%= category.categoryName %></th>
+                        <th><%= category.slug %></th>
+                    </tr>
+                <% }) %>
             </div>
         </table>
     </div>

@@ -2,7 +2,7 @@
 
 const formNewCategory = document.querySelector('#formNewCategory');
 const categoryName = document.querySelector("#categoryName");
-const regCategoryName = /^[a-zA-Z]+$/
+const regCategoryName = /^[A-Za-zÀ-ÿ\s]+$/
 
 formNewCategory.addEventListener('submit', (event) => {
     if (!regCategoryName.test(categoryName.value)) {

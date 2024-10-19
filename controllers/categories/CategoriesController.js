@@ -13,7 +13,7 @@ router.post('/sendNewCategory', (req, res) => {
     if (categoryName != undefined) {
         Category.create({
             categoryName: categoryName,
-            slug: slugify(categoryName)
+            slug: slugify(categoryName).toLowerCase()
         }).then(() => {
             console.log(`\n✅ Category '${categoryName}' registered sucessfully!`)
             res.redirect('/admin/categories/new')
@@ -26,7 +26,11 @@ router.post('/sendNewCategory', (req, res) => {
 });
 
 router.get('/admin/categories', (req, res) => {
-    res.render("../views/admin/categories/categoriesList")
+    Category.findAll().then(categories => {
+        res.render("../views/admin/categories/categoriesList", {
+            categories: categories
+        })
+    })
 })
 
 // → Exports the router
