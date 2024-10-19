@@ -25,5 +25,9 @@ router.post('/sendNewCategory', (req, res) => {
     }
 });
 
+router.get('/admin/categories', (req, res) => {
+    res.render("../views/admin/categories/categoriesList")
+})
+
 // → Exports the router
 module.exports = router;
