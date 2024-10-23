@@ -33,5 +33,24 @@ router.get('/admin/categories', (req, res) => {
     })
 })
 
+router.post('/categories/delete', (req, res) => {
+    const idCategory = req.body.idCategory
+
+    if (idCategory != undefined || !isNaN(idCategory)) {
+        Category.destroy({
+            where: {
+                id: idCategory
+            }
+        }).then(() => {
+            console.log('Data removed successfully!')
+            res.redirect('/admin/categories')
+        }).catch((error) => {
+            console.log(error)
+        })
+    } else {
+        res.redirect('/admin/categories')
+    }
+})
+
 // → Exports the router
 module.exports = router;
