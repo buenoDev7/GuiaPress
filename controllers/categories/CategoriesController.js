@@ -35,14 +35,14 @@ router.get('/admin/categories', (req, res) => {
 
 router.post('/categories/delete', (req, res) => {
     const idCategory = req.body.idCategory
-
+    const categoryName = req.body.categoryName
     if (idCategory != undefined || !isNaN(idCategory)) {
         Category.destroy({
             where: {
                 id: idCategory
             }
         }).then(() => {
-            console.log('Data removed successfully!')
+            console.log(`Category '${categoryName}' removed successfully!`)
             res.redirect('/admin/categories')
         }).catch((error) => {
             console.log(error)
