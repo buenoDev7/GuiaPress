@@ -13,7 +13,7 @@ router.post('/sendNewCategory', (req, res) => {
     if (categoryName != undefined) {
         Category.create({
             categoryName: categoryName,
-            slug: slugify(categoryName).toLowerCase()
+            slug: slugify(categoryName).toLowerCase().replace(".", "-")
         }).then(() => {
             console.log(`\n✅ Category '${categoryName}' registered sucessfully!`)
             res.redirect('/admin/categories')
