@@ -15,10 +15,10 @@ router.post('/sendNewCategory', (req, res) => {
             categoryName: categoryName,
             slug: slugify(categoryName).toLowerCase().replace(".", "-")
         }).then(() => {
-            console.log(`\n✅ Category '${categoryName}' registered sucessfully!`)
+            console.log(`\n✅ Category '${categoryName}' registered sucessfully!\n`)
             res.redirect('/admin/categories')
         }).catch((error) => {
-            console.log(`\n❌ Failed to register new Category: ${error}`)
+            console.log(`\n❌ Failed to register new Category: ${error}\n`)
         })
     } else {
         alert("You must to insert a valid category name!")
@@ -42,10 +42,10 @@ router.post('/categories/delete', (req, res) => {
                 id: idCategory
             }
         }).then(() => {
-            console.log(`Category '${categoryName}' removed successfully!`)
+            console.log(`\n✅ Category '${categoryName}' removed successfully!\n`)
             res.redirect('/admin/categories')
         }).catch((error) => {
-            console.log(error)
+            console.log(`\n❌ ${error}\n`)
         })
     } else {
         res.redirect('/admin/categories')
