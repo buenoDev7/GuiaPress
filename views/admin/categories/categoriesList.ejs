@@ -67,10 +67,9 @@
                             <button class="btn btn-danger p-0 bg-transparent border-0 mt-3 mt-md-0">
                                 <i class="bi bi-pencil pe-2" title="Edit"></i>
                             </button>
-
                             <form action="/categories/delete" method="POST" class="d-inline" onsubmit="return confirmDelete()">
-                                <input type="hidden" name="idCategory" value="<%= category.id %>">
-                                <input type="hidden" name="categoryName" value="<%= category.categoryName %>">
+                            <input type="hidden" name="idCategory" value="<%= category.id %>">
+                            <input type="hidden" name="categoryName" value="<%= category.categoryName %>">
                                 <button class="btn btn-danger p-0 bg-transparent border-0 mt-3 mt-md-0">
                                     <i class="bi bi-trash" title="Delete"></i>
                                 </button>
