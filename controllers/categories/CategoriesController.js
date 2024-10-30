@@ -70,7 +70,9 @@ router.get('/admin/categories/edit/:id', (req, res) => {
     }).catch(error => {
         console.log(error)
     })
-})
+});
+
+
 
 // → Exports the router
 module.exports = router;
