@@ -26,7 +26,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark text-white border-1 border-bottom border-secondary">
         <div class="container-fluid py-2">
-            <a href="/" class="lead fs-4 ms-3 nav-link fw-light">
+            <a href="/admin/categories" class="lead fs-4 ms-3 nav-link fw-light">
                 <i class="bi bi-house text-danger pe-1 fs-4"></i> GuiaPress
             </a>
 
@@ -42,7 +42,7 @@
         <h2 class="text-center pt-5 display-5">Categories</h2>
         <hr class="text-white w-50 mx-auto">
         <br><br>
-        <table class="table table-dark table-hover table-bordered text-center">
+        <table class="table table-dark table-hover table-bordered text-center pb-5 mb-5" id="tableCategories">
             <div class="thead">
                 <tr>
                     <th class="text-danger lead fs-6 col-1">ID</th>
@@ -85,10 +85,16 @@
         </table>
     </div>
     <div class="container-fluid px-5 d-flex">
-        <a href="#" class="btn btn-outline-danger text-white pt-2 rounded-circle shadow ms-auto mt-4 btn-float"
+        <a href="#" class="btn btn-outline-danger text-white pt-2 rounded-circle shadow ms-auto mt-4 btn-float d-none d-xxl-inline"
             data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Back to the top">
             ^
         </a>
+    </div>
+    <div class="container-fluid px-5 mt-5 d-flex">
+        <a href="#" class="btn btn-outline-danger text-white pt-2 rounded-circle shadow ms-auto mt-4 d-inline d-xxl-none"
+        data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Back to the top">
+        ^
+    </a>
     </div>
     <!-- Tooltips.js -->
     <script>
