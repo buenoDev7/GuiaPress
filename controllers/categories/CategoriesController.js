@@ -72,7 +72,22 @@ router.get('/admin/categories/edit/:id', (req, res) => {
     })
 });
 
+router.post('/categories/editCategory', (req, res) => {
+    const id = req.body.id
+    const categoryName = req.body.categoryName
 
+    if (id || categoryName != undefined) {
+        Category.update({ 
+            categoryName: categoryName, 
+            slug: slugify(categoryName).toLowerCase().replace('.', '-')}, {
+            where: {
+                id: id
+            }
+        }).then(() => {
+            res.redirect('/admin/categories')
+        })
+    }
+})
 
 // → Exports the router
 module.exports = router;

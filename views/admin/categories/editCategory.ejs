@@ -43,13 +43,13 @@
             <div class="card bg-dark border-0">
                 <div class="card-body">
 
-                    <form action="/editCategory" method="POST" class="form-control bg-dark text-white px-3 py-3 pb-4" id="formEditCategory">
+                    <form action="/categories/editCategory" method="POST" class="form-control bg-dark text-white px-3 py-3 pb-4" id="formEditCategory">
+                        <input type="hidden" name="id" value="<%= category.id %>" class="d-block">
                         <label for="categoryName" class="form-label fw-lighter pt-2 pb-2">Rewrite the Category name</label>
                         <input type="text" 
                         class="form-control bg-dark text-white fw-lighter" 
                         id="categoryName"
-                        name="categoryName" 
-                        placeholder="Ex.: JavaScript" 
+                        name="categoryName"
                         required 
                         autocomplete="off"
                         value="<%= category.categoryName %>"
