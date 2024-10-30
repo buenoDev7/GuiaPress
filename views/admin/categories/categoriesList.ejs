@@ -22,7 +22,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body class="bg-dark">
+<body class="bg-dark pb-5">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark text-white border-1 border-bottom border-light">
         <div class="container-fluid py-2">
@@ -81,6 +81,21 @@
             </div>
         </table>
     </div>
+    <div class="container-fluid px-5 d-flex">
+        <a href="#" class="btn btn-outline-danger text-white pt-2 rounded-circle shadow ms-auto mt-4"
+            data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Back to the top">
+            ^
+        </a>
+    </div>
+    <!-- Tooltips.js -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+                new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
+    </script>
 </body>
 
 </html>
