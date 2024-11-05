@@ -45,10 +45,10 @@
 
                     <form action="/sendNewArticle" method="POST" class="form-control bg-dark text-white p-4" id="formNewArticle">
                         <label for="ArticleTitle" class="form-label fw-semibold">Article name:</label>
-                        <input type="text" name="articleTitle" id="articleTitle" class="mb-3 form-control shadow bg-transparent text-white" placeholder="Ex.: 'Testing 123'">
+                        <input type="text" name="articleTitle" id="articleTitle" class="mb-3 form-control shadow bg-transparent text-white" placeholder="Ex.: Node installation with CMD" autocomplete="off" required>
                         
                         <label for="articleBody" class="form-label fw-semibold">Article description:</label>
-                        <textarea name="articleBody" id="articleBody" class="form-control shadow bg-transparent text-white" placeholder="Type your Article description here" rows="8"></textarea>
+                        <textarea name="articleBody" id="articleBody" class="form-control shadow bg-transparent text-white" placeholder="Type your Article description here" rows="8" required></textarea>
                         <button type="submit" action="button" class="btn btn-outline-danger mt-3 fw-lighter text-white" id="liveToastBtn">
                             Create
                         </button>
