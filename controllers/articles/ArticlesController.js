@@ -7,8 +7,8 @@ router.get('/articles', (req, res) => {
 });
 
 // → Route to create a new article
-router.get('/articles/admin/new', (req, res) => {
-    res.render('newArticle')
+router.get('/admin/articles/newArticle', (req, res) => {
+    res.render('../views/admin/articles/newArticle')
 });
 
 // → Exports the articles router
