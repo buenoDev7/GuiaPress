@@ -22,6 +22,14 @@ a {
     font-size: 12px;
 }
 
+.form-control:focus {
+    background: none;
+}
+
 .btn {
     font-size: 14px;
+}
+
+.bg-navblue {
+    background-color: #222f3e;
 }
