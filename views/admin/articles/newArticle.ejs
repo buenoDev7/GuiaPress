@@ -62,7 +62,7 @@
                         <label for="articleBody" class="form-label fw-semibold">Article description:</label>
                         <textarea name="articleBody" id="articleBody"
                             class="form-control shadow bg-transparent text-white"
-                            placeholder="Type your Article description here" rows="8" required></textarea>
+                            placeholder="Type your Article description here" rows="8"></textarea>
                         <button type="submit" action="button" class="btn btn-outline-danger mt-3 fw-lighter text-white"
                             id="liveToastBtn">
                             Create
@@ -79,10 +79,11 @@
     <script>
         tinymce.init({
             selector: '#articleBody',
-            plugins: 'fontselect fontsizeselect textcolor colorpicker image link table lists code',
-            toolbar: 'undo redo | fontselect fontsizeselect | bold italic | forecolor backcolor | alignleft aligncenter alignright | image link | table | code',
+            plugins: 'image link table lists code',
+            toolbar: 'undo redo | bold italic | forecolor backcolor | alignleft aligncenter alignright | image link | table | code',
             skin: 'oxide-dark',
             content_css: 'dark',
+            license_key: 'gpl'
         })
 
     </script>

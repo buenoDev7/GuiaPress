@@ -1,4 +1,5 @@
-'use strict'
+// 'use strict'
+
 
 const formNewArticle = document.querySelector('#formNewArticle');
 const articleTitle = document.querySelector("#articleTitle");
