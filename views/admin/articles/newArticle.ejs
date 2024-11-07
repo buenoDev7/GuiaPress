@@ -63,19 +63,23 @@
                         <textarea name="articleBody" id="articleBody"
                             class="form-control shadow bg-transparent text-white"
                             placeholder="Type your Article description here" rows="8"></textarea>
-                        <button class="btn btn-outline-secondary text-white dropdown-toggle mt-3" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Category
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-dark bg-navblue">
-                            <li><a class="dropdown-item ps-3" href="#">Menu item</a></li>
-                            <li><a class="dropdown-item ps-3" href="#">Menu item</a></li>
-                            <li><a class="dropdown-item ps-3" href="#">Menu item</a></li>
-                        </ul>
-                        <button type="submit" action="button" class="btn btn-outline-danger mt-3 fw-lighter text-white d-block"
-                            id="liveToastBtn">
-                            Create
-                        </button>
+
+                        <select name="categoriesList" class="form-control bg-navblue text-white mt-3 w-fit-content c-pointer border-bottom rounded-0">
+                            <option value="" disabled selected>
+                                Category Name &nbsp;↓
+                            </option>
+                            
+                            <% categories.forEach(category=> { %>
+                                <option value="<%= category.id %>" class="bg-navblue text-white">
+                                    <%= category.categoryName %>
+                                </option>
+                            <% }) %>
+                        </select>
+
+                            <button type="submit" action="button"
+                                class="btn btn-outline-danger mt-3 fw-lighter text-white d-block" id="liveToastBtn">
+                                Create
+                            </button>
                     </form>
 
                 </div>

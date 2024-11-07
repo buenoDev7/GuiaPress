@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router();
+const Category = require('../categories/Categories')
 
 // → Main route to articles page
 router.get('/articles', (req, res) => {
@@ -8,7 +9,11 @@ router.get('/articles', (req, res) => {
 
 // → Route to create a new article
 router.get('/admin/articles/newArticle', (req, res) => {
-    res.render('../views/admin/articles/newArticle')
+   Category.findAll().then(categories => {
+    res.render('../views/admin/articles/newArticle', {
+        categories: categories
+    })
+   })
 });
 
 // → Exports the articles router
