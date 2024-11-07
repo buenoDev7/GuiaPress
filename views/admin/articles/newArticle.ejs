@@ -52,26 +52,26 @@
             <div class="card bg-navblue border-0">
                 <div class="card-body">
 
-                    <form action="/sendNewArticle" method="POST" class="form-control bg-navblue text-white p-4 mb-5"
+                    <form action="/articles/sendNewArticle" method="POST" class="form-control bg-navblue text-white p-4 mb-5"
                         id="formNewArticle">
-                        <label for="ArticleTitle" class="form-label fw-semibold">Article name:</label>
-                        <input type="text" name="articleTitle" id="articleTitle"
+                        <label for="title" class="form-label fw-semibold">Article name:</label>
+                        <input type="text" name="title" id="title"
                             class="mb-3 form-control shadow bg-transparent text-white"
                             placeholder="Ex.: Node installation with CMD" autocomplete="off" required>
 
-                        <label for="articleBody" class="form-label fw-semibold">Article description:</label>
-                        <textarea name="articleBody" id="articleBody"
+                        <label for="body" class="form-label fw-semibold">Article description:</label>
+                        <textarea name="body" id="body"
                             class="form-control shadow bg-transparent text-white"
                             placeholder="Type your Article description here"></textarea>
 
                         <p class="fs-12 lead text-white mt-3 mb-2 ms-2">→ Category:</p>
-                        <select class="form-select-sm w-fit-content bg-navblue text-light border-bottom" aria-label="Category Name">
+                        <select class="form-select-sm w-fit-content bg-navblue text-light border-bottom rounded-0 c-pointer" aria-label="Category Name">
                             <option selected>Category Name</option>
                             <% categories.forEach(category=> { %>
                                 <option value="<%= category.id %>" class="bg-navblue text-white">
                                     <%= category.categoryName %>
                                 </option>
-                                <% }) %>
+                            <% }) %>
                         </select>
 
                         <button type="submit" action="button"
@@ -89,7 +89,7 @@
     <script src="/tinymce/tinymce.min.js"></script>
     <script>
         tinymce.init({
-            selector: '#articleBody',
+            selector: '#body',
             plugins: 'image link table lists code',
             toolbar: 'undo redo | bold italic | forecolor backcolor | alignleft aligncenter alignright | image link | table | code',
             skin: 'oxide-dark',
