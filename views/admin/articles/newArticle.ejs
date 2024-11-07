@@ -62,24 +62,22 @@
                         <label for="articleBody" class="form-label fw-semibold">Article description:</label>
                         <textarea name="articleBody" id="articleBody"
                             class="form-control shadow bg-transparent text-white"
-                            placeholder="Type your Article description here" rows="8"></textarea>
+                            placeholder="Type your Article description here"></textarea>
 
-                        <select name="categoriesList" class="form-control bg-navblue text-white mt-3 w-fit-content c-pointer border-bottom rounded-0">
-                            <option value="" disabled selected>
-                                Category Name &nbsp;↓
-                            </option>
-                            
+                        <p class="fs-12 lead text-white mt-3 mb-2 ms-2">→ Category:</p>
+                        <select class="form-select-sm w-fit-content bg-navblue text-light border-bottom" aria-label="Category Name">
+                            <option selected>Category Name</option>
                             <% categories.forEach(category=> { %>
                                 <option value="<%= category.id %>" class="bg-navblue text-white">
                                     <%= category.categoryName %>
                                 </option>
-                            <% }) %>
+                                <% }) %>
                         </select>
 
-                            <button type="submit" action="button"
-                                class="btn btn-outline-danger mt-3 fw-lighter text-white d-block" id="liveToastBtn">
-                                Create
-                            </button>
+                        <button type="submit" action="button"
+                            class="btn btn-outline-danger mt-3 fw-lighter text-white d-block" id="liveToastBtn">
+                            Create
+                        </button>
                     </form>
 
                 </div>
